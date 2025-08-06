@@ -1,14 +1,15 @@
 .admin-dashboard {
   padding: 2rem;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: auto;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.544), rgba(218, 165, 32, 0.237));
 }
 
 .dashboard-title {
   text-align: center;
   font-size: 2rem;
   margin-top: 2px;
-  color: goldenrod;
+  color: rgb(255, 255, 255);
 }
 
 .date-filter {

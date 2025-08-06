@@ -1,5 +1,4 @@
-
-
+// Navbar.jsx 
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import './Navbar.css'; 
@@ -28,6 +27,7 @@ function Navbar({ setShowQR, setShowAddPet }) {
   }, []);
 
   return (
+    <div className="container">
     <nav className="navbar">
       <img src={logo} alt="LovePaws Logo" className="logo-circle" />
 
@@ -46,6 +46,7 @@ function Navbar({ setShowQR, setShowAddPet }) {
         <li><NavLink to="/" onClick={handleLogout} className="nav-link">LOGOUT</NavLink></li>
       </ul>
     </nav>
+    </div>
   );
 }
 

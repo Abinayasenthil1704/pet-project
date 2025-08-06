@@ -10,19 +10,19 @@ const AdminUsers = () => {
   const [sortField, setSortField] = useState(null);
   const [sortOrder, setSortOrder] = useState("asc");
   const [filterText, setFilterText] = useState("");
-  const [loading, setLoading] = useState(false); // 🆕 loading state
+  const [loading, setLoading] = useState(false);
 
   const fetchUsers = () => {
-    setLoading(true); // 🆕 set loading true
+    setLoading(true);
     fetch("https://pet-server-r9z4.onrender.com/api/admin/users")
       .then((res) => res.json())
       .then((data) => {
         setUsers(data);
-        setLoading(false); // 🆕 set loading false
+        setLoading(false);
       })
       .catch((err) => {
         console.error("Error fetching users:", err);
-        setLoading(false); // 🆕 stop loading on error too
+        setLoading(false);
       });
   };
 
@@ -50,19 +50,18 @@ const AdminUsers = () => {
 
   const toggleSort = (field) => {
     if (sortField === field) {
-      setSortOrder((prev) => (prev === "asc" ? "desc" : "asc"));
+      setSortOrder(prev => (prev === "asc" ? "desc" : "asc"));
     } else {
       setSortField(field);
       setSortOrder("asc");
     }
   };
 
-  const filteredUsers = users.filter((user) => {
+  const filteredUsers = users.filter(user => {
     const search = filterText.toLowerCase();
-    const username = user.username?.toLowerCase() || "";
-    const email = user.email?.toLowerCase() || "";
     return (
-      username.startsWith(search) || email.startsWith(search)
+      user.username?.toLowerCase().includes(search) ||
+      user.email?.toLowerCase().includes(search)
     );
   });
 
@@ -70,7 +69,6 @@ const AdminUsers = () => {
     if (!sortField) return 0;
     const valA = (a[sortField] || "").toLowerCase();
     const valB = (b[sortField] || "").toLowerCase();
-
     if (valA < valB) return sortOrder === "asc" ? -1 : 1;
     if (valA > valB) return sortOrder === "asc" ? 1 : -1;
     return 0;
@@ -80,6 +78,7 @@ const AdminUsers = () => {
     <div className="admin-users-container">
       <Popup showQR={showQR} setShowQR={setShowQR} showAddPet={showAddPet} setShowAddPet={setShowAddPet} />
       <AdminNavbar />
+
       <h1 className="admin-heading">Admin User Management</h1>
 
       <div className="sort-filter-controls">
@@ -92,25 +91,36 @@ const AdminUsers = () => {
       </div>
 
       <section className="user-list-section">
-        <h3 className="user-list-title">Users</h3>
-
         {loading ? (
-         <div className="loading-container">
+          <div className="loading-container">
             <div className="spinner"></div>
-            <p>Loading pets...</p>
+            <p>Loading users...</p>
           </div>
         ) : (
-          <ul className="user-list">
-            {sortedUsers.map((user) => (
-              <li key={user._id} className="user-card">
-                <div>
-                  <p><strong>{user.username}</strong></p>
-                  <p>{user.email}</p>
-                </div>
-                <button className="delete-btn" onClick={() => handleDelete(user._id)}>Delete</button>
-              </li>
-            ))}
-          </ul>
+          <table className="user-table">
+            <thead>
+              <tr>
+                <th onClick={() => toggleSort("username")}>
+                  Username {sortField === "username" && (sortOrder === "asc" ? "↑" : "↓")}
+                </th>
+                <th onClick={() => toggleSort("email")}>
+                  {sortField === "email" && (sortOrder === "asc" ? "↑" : "↓")}
+                </th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sortedUsers.map(user => (
+                <tr key={user._id}>
+                  <td>{user.username}</td>
+                  <td>{user.email}</td>
+                  <td>
+                    <button className="delete-btn" onClick={() => handleDelete(user._id)}>Delete</button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         )}
       </section>
     </div>
