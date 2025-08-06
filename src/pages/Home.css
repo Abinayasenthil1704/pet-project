@@ -1,0 +1,665 @@
+/* search container */
+.pet-finder-container {
+  background: linear-gradient(to right, #e0f7fa, #fce4ec);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  margin: 15px 20px;
+  border: 5px solid black;
+  /* max-width: 600px; */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  animation: popupFade 0.6s ease-in-out;
+}
+
+.pet-link {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.pet-link:hover {
+  color: black;
+  text-decoration: none;
+  background-color: goldenrod;
+  border: 3px solid rgb(0, 0, 0);
+  padding: 5px 10px;
+  border-radius: 10px;
+  /* border-radius: 8px; */
+}
+
+.pet-description,
+.pet-subtext {
+  font-size: 18px;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Popup Animation */
+@keyframes popupFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; 
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.6);
+}
+
+.hero-text {
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  animation: fadeInUp 1.5s ease-out both;
+}
+
+.hero-heading {
+  font-size: 4rem;
+  font-weight: 700;
+  color:white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  animation: slideInDown 1.2s ease-out forwards;
+}
+
+.hero-subtext {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 2s ease-in forwards;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 🌐 Responsive Design */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2.5rem;
+  }
+  .hero-section{
+    margin-top: 50px;
+  }
+  .hero-subtext {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .hero-text {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-heading {
+    font-size: 2rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+  }
+
+  .hero-text {
+    padding: 1rem;
+  }
+}
+
+
+.about-health {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 50px;
+  background: linear-gradient(to right, #e3b6dc,#fff0fc);
+  /* gap: 30px; */
+  flex-wrap: wrap;
+}
+.badge {
+  background-color: rgb(218, 113, 32);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 12px;
+  display: inline-block;          
+  text-transform: uppercase;    
+  letter-spacing: 1px;           
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+  cursor: default;               
+  transition: transform 0.3s ease; 
+}
+
+.badge:hover {
+  transform: scale(1.05);        
+}
+
+
+.beagle-img {
+  /* width: 100%; */
+  max-width: 350px;
+  margin-left: 30%;
+}
+
+.health-content {
+  flex: 1;
+  max-width: 600px;
+  margin-right: 20%;
+}
+
+.health-content h2 {
+  font-size: 32px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #000000;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+  .features {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 20px;
+  }
+
+  .features ul {
+    list-style: none;
+    padding: 0;
+  }
+
+.features li {
+  margin-bottom: 10px;
+  color: #000000;
+  font-weight: 500;
+}
+.offer-info h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background-color: rgb(218, 165, 32);
+  /* color: #fff; */
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 19px;
+  cursor: pointer;
+  z-index: 1000;
+  /* transition: background-color 0.3s ease; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top:hover {
+  background-color: #4f4e4e;
+}
+
+.offer-text{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+}
+
+@media (max-width: 950px) {
+  /* Hero */
+  .hero-text h1 {
+    margin-left: -10%;
+    font-size: 29px;
+  }
+
+  .hero-text h3 {
+    margin-left: -9%;
+    font-size: 14px;
+  }
+
+  /* Promotions */
+  .promotions-grid {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  
+  }
+
+  @media (max-width: 868px) {
+  .about-health {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+
+  .beagle-img {
+    width: 100%;
+    max-width: 300px;
+    margin-left: -10%;
+  }
+
+  .health-content {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .features ul {
+    padding: 0;
+  }
+}
+
+
+.imgfood{
+  width:100%;
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  border: 2px solid #ff9800;
+}
+
+
+/*  MOBILE RESPONSIVENESS (480px and below) */
+@media (max-width: 480px) {
+  /* Hero Section */
+  .hero-section {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .hero-text {
+    position: static;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 24px;
+    margin-left: 0;
+  }
+
+  .hero-text h3 {
+    font-size: 14px;
+    margin-left: 0;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: auto;
+  }
+
+  
+  /* Category List */
+  .category-item {
+    width: 100px;
+  }
+
+  .category-item img {
+    height: 100px;
+  }
+  
+
+
+  /* Promotions Section */
+  .promotions-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .promo-box {
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .promo-box img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .beagle-img,
+  .food-pack-img {
+    margin: 0 auto;
+  }
+
+  .health-content h2 {
+    font-size: 22px;
+  }
+
+  .description,
+  .features li {
+    font-size: 14px;
+  }
+  /* Back to Top Button */
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    right: 15px;
+    bottom: 20px;
+  }
+}
+
+/* promotion */
+.promo-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.promo-card {
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.promo-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  border: 2px solid #ff9800;
+}
+
+.promo-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: opacity 0.3s ease;
+}
+
+.promo-card:hover .promo-img {
+  opacity: 0.9;
+}
+
+.promo-card h2 {
+  margin: 15px 0 5px;
+  color: #000000;
+  font-size: 20px;
+}
+
+.promo-card p {
+  color: #000000;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .promo-card {
+    width: 70%;
+  }
+}
+.promo-heading {
+  text-align: center;
+  font-size: 24px;
+  width: 30%;
+  align-self: center;
+  margin-left: 40%;
+  border-radius: 70px;
+  border: goldenrod 2px solid;
+  cursor: pointer;
+  color: #000000;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+.promo-heading:hover{
+  background-color: goldenrod;
+  color: #000;
+  transform: scale(1.04);
+}
+/* searh and offer */
+
+/* Container for both sections */
+.section-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  align-items: stretch; /* Ensures equal height */
+}
+
+/* Left Side: Image Section */
+.quick-search {
+  flex: 1 1 45%;
+  min-width: 300px;
+  display: flex;
+  border: 6px solid black;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.quick-search img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right Side: Offer + Categories */
+.right-content {
+  flex: 1 1 45%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+li{
+  list-style: none;
+}
+
+/* Offer Section Styling */
+.final-offer {
+  text-align: center;
+  border: 6px solid rgb(0, 0, 0);
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1;
+}
+
+.final-offer h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.final-offer p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.offer-features {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.offer-features li {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+/* Categories Section */
+.categories {
+  padding: 20px;
+  border: 7px solid rgb(0, 0, 0);
+  margin-top: 3px;
+  border-radius: 12px;
+  flex: 1;
+}
+
+.categories h2 {
+  font-size: 20px;
+  width: 40%;
+  margin-left: 30%;
+  border-radius: 70px;
+  border: goldenrod 3px solid;
+  cursor: pointer;
+  margin-bottom: 80px;
+  text-align: center;
+}
+.categories h2:hover{
+  background-color: gold;
+}
+
+.category-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.category-item {
+  flex: 1 1 30%;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border:  solid goldenrod 4px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 1.10);
+}
+
+.imgfood {
+  width: 109%;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.img-container:hover .imgfood {
+  transform: scale(1.05);
+}
+
+.img-popup {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.img-container:hover .img-popup {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-flex-container {
+    flex-direction: column;
+  }
+
+  .quick-search,
+  .right-content {
+    flex: 1 1 100%;
+  }
+
+  .category-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .category-item {
+    flex: 1 1 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .imgfood {
+    width: 100%;
+    height: 200px;
+  }
+  .promo-heading {
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .promo-img{
+    width: 50%;
+    height: 70%;
+    object-fit: cover;
+  }
+}
+
+

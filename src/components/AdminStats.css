@@ -1,0 +1,174 @@
+.admin-dashboard {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.dashboard-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2px;
+  color: goldenrod;
+}
+
+.date-filter {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.date-filter input {
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  color: goldenrod;
+  margin-top: 20px;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #111;
+  box-shadow: 0 4px 12px rgba(218, 165, 32, 0.367);
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.chart-section {
+  margin-top: 2rem;
+}
+
+.chart-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.loading, .error {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.error {
+  color: red;
+}
+
+/* Loader styles */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid goldenrod;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 0.9s linear infinite;
+  margin-bottom: 12px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #111;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.section-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: goldenrod;
+  border-bottom: 1px solid goldenrod;
+  padding-bottom: 0.5rem;
+}
+
+/* Category cards */
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.category-card {
+  background: #222;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 120px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+}
+
+.category-name {
+  font-size: 1rem;
+  color: goldenrod;
+}
+
+.category-count {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Breed list */
+.breed-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.breed-list li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #333;
+  color: white;
+}
+
+/* Activity list */
+.activity-list {
+  list-style: none;
+  padding: 0;
+  /* margin-left: 200px; */
+  margin: 5px 2px;
+}
+
+.activity-list li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #333;
+  color: white;
+  font-size: 0.95rem;
+}

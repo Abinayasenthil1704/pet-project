@@ -1,0 +1,461 @@
+/* Base Styles */
+.pets-container {
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f8fa;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.pets-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Grid Layout */
+.pets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+/* Pet Card */
+.pet-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 16px;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.pet-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.pet-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+}
+
+.pet-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.3rem;
+}
+
+.pet-card p {
+  margin: 0.25rem 0;
+  color: #555;
+}
+
+.adopt-btn {
+  margin-top: 0.8rem;
+  background-color: goldenrod;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.adopt-btn:hover {
+  background-color: rgb(209, 152, 7);
+}
+
+/* Loading & Error */
+.loading,
+.error {
+  font-size: 1.2rem;
+  color: #dc3546a3;
+  margin-top: 2rem;
+}
+
+/* Adoption Form */
+.adoption-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.adoption-form {
+  background: #fff;
+  padding: 2rem;/* AllPets.css - Cleaned + Stagger Animation */
+
+/* Container */
+.pets-container {
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f8fa;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.pets-title {
+  font-size: 2rem;
+  margin-top: 3px;
+  margin-bottom: 1.5rem;
+  color: #000000;
+}
+
+/* Grid Layout */
+.pets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+/* Pet Card */
+.pet-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 16px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Smooth stagger animation for each card */
+.pet-card:nth-child(1) { animation-delay: 0.1s; }
+.pet-card:nth-child(2) { animation-delay: 0.2s; }
+.pet-card:nth-child(3) { animation-delay: 0.3s; }
+.pet-card:nth-child(4) { animation-delay: 0.4s; }
+.pet-card:nth-child(5) { animation-delay: 0.5s; }
+.pet-card:nth-child(6) { animation-delay: 0.6s; }
+.pet-card:nth-child(7) { animation-delay: 0.7s; }
+.pet-card:nth-child(8) { animation-delay: 0.8s; }
+.pet-card:nth-child(9) { animation-delay: 0.9s; }
+.pet-card:nth-child(10) { animation-delay: 1s; }
+
+.pet-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.pet-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+}
+
+.pet-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.3rem;
+}
+
+.pet-card p {
+  margin: 0.25rem 0;
+  color: #555;
+}
+
+/* Adopt Button */
+.adopt-btn {
+  margin-top: 0.8rem;
+  background-color: goldenrod;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.adopt-btn:hover {
+  background-color: rgb(209, 152, 7);
+}
+
+/* Loading & Error */
+.loading,
+.error {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  color: #dc3546a3;
+  text-align: center;
+}
+
+/* Loading Spinner */
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bold;
+}
+
+.loading::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 5px solid gray;
+  border-top: 5px solid black;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Adoption Form Overlay */
+.adoption-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Adoption Form Box */
+.adoption-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.adoption-form h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.adoption-form input {
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0.5rem 0;
+  border: 1px solid #000;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Buttons Group */
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.btn-group button {
+  padding: 0.5rem 1rem;
+  width: 200px;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+/* Email Button */
+.btn-group button[type="submit"] {
+  background-color: #28a746;
+}
+
+.btn-group button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* WhatsApp Button */
+.btn-group button:nth-child(2) {
+  background-color: #25d366;
+}
+
+.btn-group button:nth-child(2):hover {
+  background-color: #1ebd5c;
+}
+
+/* Cancel Button */
+.btn-group button:nth-child(3) {
+  background-color: #dc3545;
+}
+
+.btn-group button:nth-child(3):hover {
+  background-color: #c82333;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .pets-container {
+    padding: 1rem;
+  }
+
+  .pet-img {
+    height: 240px;
+  }
+
+  .adoption-form {
+    padding: 1.2rem;
+  }
+
+  .adoption-form input {
+    font-size: 0.95rem;
+  }
+
+  .btn-group button {
+    font-size: 0.95rem;
+  }
+
+  .pets-title {
+    font-size: 1.8rem;
+    margin-top: 4px;
+  }
+}
+
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.adoption-form h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.adoption-form input {
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0.5rem 0;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.btn-group button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-left: 19%;
+  width: 200px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-group button[type="submit"] {
+  background-color: #28a746;
+  color: rgb(5, 5, 5);
+}
+
+.btn-group button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+.btn-group button:nth-child(2) {
+  background-color: #25d366;
+  color: rgb(0, 0, 0);
+}
+
+.btn-group button:nth-child(2):hover {
+  background-color: #1ebd5c;
+}
+
+.btn-group button:nth-child(3) {
+  background-color: #dc3545;
+  color: rgb(0, 0, 0);
+}
+
+.btn-group button:nth-child(3):hover {
+  background-color: #c82333;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+.loading::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 5px solid gray;
+  border-top: 5px solid black;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

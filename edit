@@ -1,0 +1,145 @@
+ <div className='section-flex-container'>
+        {/* Quick Search */}
+      <section className="quick-search">
+        <img src={ext}  alt="extentionimg" />
+      </section>
+
+      {/* Special Offer Section */}
+      <section className="final-offer">
+        <div className="offer-text">
+          <h2>🎁 Special Bundle Offer!</h2>
+          <p>Get up to <strong>25% OFF</strong> on all your pet's favorites — limited time only!</p>
+          <ul className="offer-features">
+            <li>🐾 Healthy Meals for Dogs & Cats</li>
+            <li>🦜 Nutritious Food for Birds & Rodents</li>
+            <li>🛍️ Free Shipping on orders above ₹999</li>
+          </ul>
+        </div>
+       <Link to="https://www.amazon.in/b?ie=UTF8&node=18589219031">click here</Link>
+        <section className="categories">
+  <h2>Shop Food By Categories</h2>
+  <div className="category-list">
+    
+    {/* Bird Food */}
+    <div className="category-item">
+      <a href="https://www.amazon.in/Bird-Food-Birds/s?rh=n%3A4771370031" target="_blank" rel="noopener noreferrer">
+        <div className="img-container">
+          <img src={birdFood} alt="Bird Food" className="imgfood" />
+          <div className="img-popup">
+            <p>Boosts feather health & digestion for pet birds.</p>
+          </div>
+        </div>
+      </a>
+      <p>Bird Food</p>
+    </div>
+
+    {/* Dog Food */}
+    <div className="category-item">
+      <a href="https://www.amazon.in/s?k=dog+food" target="_blank" rel="noopener noreferrer">
+        <div className="img-container">
+          <img src={dogFood} alt="Dog Food" className="imgfood" />
+          <div className="img-popup">
+            <p>Supports strong bones, healthy coat & energy levels.</p>
+          </div>
+        </div>
+      </a>
+      <p>Dog Food</p>
+    </div>
+
+    {/* Cat Food */}
+    <div className="category-item">
+      <a href="https://www.amazon.in/s?k=cat+food" target="_blank" rel="noopener noreferrer">
+        <div className="img-container">
+          <img src={catFood} alt="Cat Food" className="imgfood" />
+          <div className="img-popup">
+            <p>Enhances vision, urinary health & fur quality.</p>
+          </div>
+        </div>
+      </a>
+      <p>Cat Food</p>
+    </div>
+
+  </div>
+</section>
+
+      </section>
+      </div>
+
+
+
+
+
+
+
+
+
+      <div className='section-flex-container'>
+        {/* Quick Search */}
+      <section className="quick-search">
+        <img src={ext}  alt="extentionimg" />
+      </section>
+
+      {/* Special Offer Section */}
+      <div>
+        <section className="final-offer">
+        <div className="offer-text">
+          <h2>🎁 Special Bundle Offer!</h2>
+          <p>Get up to <strong>25% OFF</strong> on all your pet's favorites — limited time only!</p>
+          <ul className="offer-features">
+            <li>🐾 Healthy Meals for Dogs & Cats</li>
+            <li>🦜 Nutritious Food for Birds & Rodents</li>
+            <li>🛍️ Free Shipping on orders above ₹999</li>
+          </ul>
+        </div>
+       <Link to="https://www.amazon.in/b?ie=UTF8&node=18589219031">click here</Link>
+        
+
+      </section>
+
+      <section className="categories">
+  <h2>Shop Food By Categories</h2>
+  <div className="category-list">
+    
+    {/* Bird Food */}
+    <div className="category-item">
+      <a href="https://www.amazon.in/Bird-Food-Birds/s?rh=n%3A4771370031" target="_blank" rel="noopener noreferrer">
+        <div className="img-container">
+          <img src={birdFood} alt="Bird Food" className="imgfood" />
+          <div className="img-popup">
+            <p>Boosts feather health & digestion for pet birds.</p>
+          </div>
+        </div>
+      </a>
+      <p>Bird Food</p>
+    </div>
+
+    {/* Dog Food */}
+    <div className="category-item">
+      <a href="https://www.amazon.in/s?k=dog+food" target="_blank" rel="noopener noreferrer">
+        <div className="img-container">
+          <img src={dogFood} alt="Dog Food" className="imgfood" />
+          <div className="img-popup">
+            <p>Supports strong bones, healthy coat & energy levels.</p>
+          </div>
+        </div>
+      </a>
+      <p>Dog Food</p>
+    </div>
+
+    {/* Cat Food */}
+    <div className="category-item">
+      <a href="https://www.amazon.in/s?k=cat+food" target="_blank" rel="noopener noreferrer">
+        <div className="img-container">
+          <img src={catFood} alt="Cat Food" className="imgfood" />
+          <div className="img-popup">
+            <p>Enhances vision, urinary health & fur quality.</p>
+          </div>
+        </div>
+      </a>
+      <p>Cat Food</p>
+    </div>
+
+  </div>
+</section>
+      </div>
+      </div>

@@ -1,0 +1,124 @@
+/* AdminUsers.css - Cleaned */
+
+/* Container */
+.admin-users-container {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* Heading */
+.admin-heading {
+  text-align: center;
+  margin: 10px 0 1rem;
+  color: #343a40;
+}
+
+/* Search bar */
+.sort-filter-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sort-filter-controls input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  min-width: 200px;
+}
+
+/* User list section */
+.user-list-section {
+  padding: 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.user-list-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+}
+
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-card div {
+  flex: 1;
+  word-break: break-word;
+}
+
+.user-card p {
+  margin: 0.25rem 0;
+  font-size: 1rem;
+}
+
+/* Delete button */
+.delete-btn {
+  background-color: gold;
+  color: black;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #e60000;
+  color: white;
+}
+
+/* Loader */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #28a745;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 0.9s linear infinite;
+  margin-bottom: 12px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .user-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .delete-btn {
+    align-self: flex-end;
+    margin-top: 0.75rem;
+    width: 100%;
+  }
+}

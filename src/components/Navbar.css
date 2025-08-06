@@ -1,0 +1,154 @@
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  background-color: black;
+  color: white;
+  position: sticky;     /* ✅ Fixes navbar to top */
+  top: 0;              /* ✅ Aligns to top */
+  left: 0;
+  z-index: 1000;      
+}
+
+.logo-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* Buttons */
+.btn {
+  border: none;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  background-color: goldenrod;
+  margin-left: 500px;
+  color: black;
+}
+.btn2 {
+  border: none;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  background-color: goldenrod;
+  /* margin-left: 150px; */
+  color: black;
+}
+
+.btn:hover {
+  background-color: #e6e6e6;
+}
+
+.btn2:hover {
+  background-color: #e6e6e6;
+}
+/* Navbar Links */
+.navbar-nav {
+  display: flex;
+ 
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight:1000;
+  transition: color 0.3s;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color:gold;
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    margin-bottom: -50px;
+    /* align-items: flex-start; */
+    
+  }
+
+  .logo-circle {
+    margin-bottom: 1rem;
+    display: none;
+  }
+
+
+  .navbar-nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .btn{
+    margin-left: 303px;
+    margin-bottom: 10px;
+    text-align: center;
+  } 
+   .btn2{
+    margin-left: 300px;
+    margin-bottom: 10px;
+    text-align: center;
+  } 
+
+  .nav-link {
+    padding: 0.5rem 0;
+    color:white;
+  }
+}
+
+.navbar-nav .admin-link {
+  color: yellow; /* or your preferred highlight color */
+  font-weight: bold;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  margin-left: 1rem;
+}
+
+.profile-pic {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-details {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+}
+
+.profile-pic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}

@@ -1,0 +1,86 @@
+.care-tips-container {
+  padding: 60px 10%;
+  background-color: #e0e0e0;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  animation: fadeInDown 0.5s ease;
+}
+
+.care-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #000000;
+  animation: fadeInDown 0.8s ease;
+}
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, auto);   /* 2 rows */
+  gap: 30px;
+  justify-items: center;
+}
+
+
+.tip-card {
+  background-color: #eee5e5;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px 20px;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  background-color: thistle;
+}
+
+.tip-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.tip-card p {
+  font-size: 15px;
+  color: #666;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .tips-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,203 @@
+.admin-sold-container {
+  padding: 1rem;
+  background-color: #f6f8fa;
+  min-height: 100vh;
+}
+
+.admin-sold-heading {
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.controls input,
+.controls select {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 250px;
+  max-width: 100%;
+}
+
+.sold-pet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.sold-pet-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+  border: 4px solid rgb(0, 0, 0);
+  border-radius: 13px;
+}
+
+.sold-pet-card:hover {
+  transform: scale(1.02);
+  
+}
+
+.sold-pet-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.sold-pet-details {
+  padding: 10px 30px;
+  border: 4px solid rgb(0, 0, 0);
+  border-radius: 13px;
+}
+
+.sold-pet-details h3 {
+  margin: 0 0 0.5rem;
+  color: #000000;
+  font-size: 1.3rem;
+}
+
+.sold-pet-details p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #000000;
+}
+.sold-pet-details {
+  position: relative;
+  /* background: #fff; */
+  background: linear-gradient(to bottom, rgba(218, 165, 32, 0.777), #fff);
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden; /* So ribbon edges don’t overflow */
+}
+
+/* Diagonal Ribbon */
+.sold-badge {
+  position: absolute;
+  top: 15px;
+  right: -40px;
+  background: crimson;
+  color: rgb(255, 255, 255);
+  padding: 5px 50px;
+  transform: rotate(45deg);
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0,0,0,1.2);
+}
+
+
+
+.no-pets-text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #888;
+  margin-top: 2rem;
+}
+.soldpets-container {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.soldpets-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  letter-spacing: 1px;
+}
+
+.soldpets-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.soldpets-search,
+.soldpets-sort {
+  padding: 0.7rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-width: 240px;
+  font-size: 1rem;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.soldpets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.soldpets-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.soldpets-card:hover {
+  transform: translateY(-5px);
+}
+
+.soldpets-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.soldpets-info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.soldpets-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.soldpets-info p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.soldpets-empty {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #999;
+  margin-top: 2rem;
+}

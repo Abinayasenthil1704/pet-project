@@ -1,0 +1,152 @@
+/* Container */
+.admin-pets-container {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading */
+.admin-pets-container h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Controls */
+.admin-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.admin-controls input,
+.admin-controls select {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  min-width: 200px;
+}
+
+/* Pet List */
+.pet-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+/* Pet Card */
+.pet-card {
+  background: linear-gradient(to bottom, rgba(230, 215, 177, 0.777), #fff);
+  padding: 1rem 1.2rem;
+  border: 4px solid black;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pet-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pet-card strong {
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.pet-card span {
+  display: block;
+  margin-top: 4px;
+  font-size: 1rem;
+  color: #000;
+}
+
+/* Buttons */
+.delete-btn,
+.sold-btn {
+  margin-top: 10px;
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn {
+  background-color: goldenrod;
+  color: black;
+}
+
+.delete-btn:hover {
+  background-color: rgba(255, 183, 0, 0.75);
+}
+
+.sold-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.sold-btn:hover {
+  background-color: #1e7e34;
+}
+
+/* Loader styles */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid goldenrod;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 0.9s linear infinite;
+  margin-bottom: 12px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .admin-pets-container {
+    padding: 1rem;
+  }
+
+  .admin-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-controls input,
+  .admin-controls select {
+    width: 100%;
+  }
+
+  .pet-card {
+    padding: 0.8rem;
+  }
+
+  .delete-btn,
+  .sold-btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
