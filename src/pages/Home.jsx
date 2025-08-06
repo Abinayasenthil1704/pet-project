@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Home.css';
 import birdFood from '../assets/birdfood.jpeg';
 import dogFood from '../assets/DOG.jpeg';
-import catFood from '../assets/cat.jpeg';
+import catFood from '../assets/Cat.jpeg'
 import freezeDogFood from '../assets/dogfood.png';
 import accessories from '../assets/accessories.png';
 import petDeals from '../assets/dealfood.png';
